@@ -1,80 +1,14 @@
-body{
-  text-align:center;
-  background-image: url("https://image.gcores.com/1dddea673aa0aa69d00cbb476fb93cb8-1920-1080.jpg");
-  width:1920px;
-  
+let title = document.getElementById("title"); 
+let btn = document.getElementById("btn");
+let list = document.getElementById("list");
+let content = document.getElementById("content");
+btn.addEventListener("click",news);
+function news(){
+  list.innerHTML=list.innerHTML+`
+  <div class="news">
+    <p>${content.value}</p><hr>
+   </div>
+   `
+  ;
 }
-.inner{
-  position:relative;
-  width:400px;
-  top:0px;
-  height:1080px;
-  left:700px;
-  right:700px;
-  background:hsla(168,100%,50%,0.3);
-}
-.video{
-  position:relative;
-  left:-70px;
-  width:100px
-}
-.g{
-    width: 150px;
-    height: 40px;
-    left:120px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    line-height: 40px;
-    color: #000;
-    background-color: transparent;
-    position: relative;
-    transition: all .3s linear;
-}
-.g > p{
-    position: relative;
-    z-index: 1;
-}
-.g::before{
-    content: "";
-    width: 20px;
-    height: 20px;
-    display: block;
-    box-sizing: border-box;
-    border-top: 1px solid #000;
-    border-left: 1px solid #000;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: all .3s linear;
-}
-.g::after{
-    content: "";
-    width: 20px;
-    height: 20px;
-    display: block;
-    box-sizing: border-box;
-    border-bottom: 1px solid #000;
-    border-right: 1px solid #000;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    transition: all .3s ease;
-}
-.g:hover::before,
-.g:hover::after{
-    width: 100%;
-    height: 100%;
-}
-.fixed{
-  background:red;
-  color:white;
-  position:fixed;
-  right:0px;
-  top:0px;
-  font-size:35px;
-  font-weight:900px;
-}
-
 
